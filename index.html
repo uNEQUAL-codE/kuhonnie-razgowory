@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Кухни на заказ в Новосибирске — фабрика «Кухонные разговоры» | Мебель со смыслом</title>
+  <meta name="description" content="Кухни на заказ за 30 дней. Дизайнер приедет домой с образцами. 3D-проект за 3 часа. Гарантия 5 лет. Собственное производство в Новосибирске.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F7F4EF;
+      --bg-soft: #EFEAE3;
+      --bg-card: #FFFFFF;
+      --bg-dark: #1C1917;
+      --text: #1C1917;
+      --text-muted: #6B6560;
+      --accent: #C9A46C;
+      --accent-dark: #A88A54;
+      --radius: 10px;
+      --shadow: 0 4px 24px rgba(28, 25, 23, 0.06);
+      --shadow-hover: 0 12px 32px rgba(28, 25, 23, 0.1);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+
+    /* Header */
+    .header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      background: rgba(247, 244, 239, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(28, 25, 23, 0.06);
+    }
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+    .header-logo {
+      height: 56px;
+      object-fit: contain;
+    }
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+    .header-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .header-nav a:hover { color: var(--accent-dark); }
+    .header .btn { padding: 10px 20px; font-size: 0.9rem; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--accent);
+      color: #1C1917;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.2s ease;
+      box-shadow: 0 2px 8px rgba(201, 164, 108, 0.3);
+    }
+    .btn:hover { background: var(--accent-dark); transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+      border: 1.5px solid var(--accent);
+      box-shadow: none;
+    }
+    .btn-outline:hover { background: var(--accent); color: #1C1917; }
+
+    /* Sections */
+    .section { padding: 88px 0; }
+    .section-title {
+      font-family: 'Unbounded', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 12px;
+      letter-spacing: -0.3px;
+    }
+    .section-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto 48px;
+      font-size: 1.05rem;
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(105deg, rgba(28,25,23,0.85) 0%, rgba(28,25,23,0.45) 55%, rgba(28,25,23,0.2) 100%), url('imagine_images/hero-family.jpg') center/cover no-repeat;
+      color: #fff;
+      padding-top: 72px;
+    }
+    .hero-content { max-width: 640px; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      letter-spacing: 0.4px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Unbounded', sans-serif;
+      font-size: clamp(2.4rem, 5.5vw, 3.6rem);
+      font-weight: 600;
+      line-height: 1.12;
+      margin-bottom: 20px;
+    }
+    .hero .lead {
+      font-size: 1.12rem;
+      opacity: 0.92;
+      margin-bottom: 32px;
+      max-width: 520px;
+    }
+    .hero-micro { font-size: 0.88rem; opacity: 0.75; margin-top: 12px; }
+    .installment-badge {
+      position: absolute;
+      top: 96px;
+      right: 32px;
+      background: #1C1917;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    /* Quiz */
+    .quiz-box {
+      max-width: 560px;
+      margin: 0 auto;
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 40px 36px;
+      box-shadow: var(--shadow);
+    }
+    .quiz-step { display: none; }
+    .quiz-step.active { display: block; }
+    .quiz-step h3 { font-size: 1.35rem; text-align: center; margin-bottom: 28px; }
+    .options { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .option {
+      background: #F7F4EF;
+      border: 1.5px solid transparent;
+      border-radius: var(--radius);
+      padding: 18px 14px;
+      text-align: center;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.15s;
+    }
+    .option:hover, .option.selected { border-color: var(--accent); background: #FFF9F2; }
+    .slider-wrap { padding: 16px 0 24px; }
+    input[type="range"] { width: 100%; accent-color: var(--accent); }
+    .slider-value { text-align: center; font-size: 1.5rem; font-weight: 700; color: var(--accent-dark); margin-top: 8px; }
+    .form-fields { display: flex; flex-direction: column; gap: 14px; }
+    .form-fields input {
+      padding: 14px 16px;
+      border: 1.5px solid #E5E0D8;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    .lead-magnet {
+      background: #FFF9F2;
+      border-left: 3px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      margin-bottom: 20px;
+    }
+    .progress-dots { display: flex; justify-content: center; gap: 8px; margin-bottom: 28px; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: #E5E0D8; }
+    .dot.active { background: var(--accent); }
+
+    /* Cards */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .card {
+      background: var(--bg-card);
+      border-radius: 14px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+    }
+    .card h3 { font-size: 1.15rem; margin-bottom: 10px; color: var(--accent-dark); }
+
+    /* Portfolio */
+    .portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .portfolio-card {
+      background: var(--bg-card);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: 0.25s;
+    }
+    .portfolio-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+    .portfolio-card img { width: 100%; height: 260px; object-fit: cover; }
+    .portfolio-info { padding: 22px 24px 28px; }
+    .portfolio-info h3 { font-size: 1.2rem; margin-bottom: 10px; }
+    .price { font-size: 1.45rem; font-weight: 800; color: var(--accent-dark); margin: 14px 0 8px; }
+    .quote { font-style: italic; color: var(--text-muted); border-left: 3px solid var(--accent); padding-left: 12px; margin-top: 10px; }
+
+    /* Production */
+    .production { background: var(--bg-dark); color: #fff; }
+    .production .section-title { color: #fff; }
+    .prod-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: start; margin-top: 32px; }
+    .founder-photo { width: 100%; max-width: 280px; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.3); }
+    .founder-quote-box { background: rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; }
+    .founder-quote-box p { font-size: 1.02rem; line-height: 1.65; }
+    .video-placeholder { position: relative; border-radius: 16px; overflow: hidden; aspect-ratio: 9/16; max-height: 420px; background: #111; margin-bottom: 20px; }
+    .video-placeholder img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .play-overlay { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.3); font-size: 28px; color: #fff; }
+    .video-caption { position: absolute; bottom: 12px; left: 0; right: 0; text-align: center; font-size: 0.82rem; opacity: 0.95; }
+    .features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .features-grid .feature { background: rgba(255,255,255,0.06); padding: 12px; border-radius: 10px; font-size: 0.9rem; }
+    .prod-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+    .founder-quote {
+      background: rgba(255,255,255,0.06);
+      border-radius: 14px;
+      padding: 28px;
+    }
+    .founder-quote img { width: 110px; border-radius: 10px; margin-bottom: 16px; }
+    .features { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+    .feature { font-size: 0.95rem; }
+
+    /* Timeline */
+    .timeline {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 20px; left: 40px; right: 40px;
+      height: 2px;
+      background: var(--accent);
+    }
+    .step { text-align: center; flex: 1; position: relative; z-index: 1; }
+    .step-number {
+      width: 40px; height: 40px;
+      background: var(--accent);
+      color: #1C1917;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700;
+      margin: 0 auto 14px;
+    }
+    .step h3 { font-size: 1.05rem; margin-bottom: 6px; }
+    .step p { font-size: 0.9rem; color: var(--text-muted); }
+    .highlight { color: var(--accent-dark); font-weight: 700; }
+
+    /* Reviews */
+    .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .review-card {
+      background: var(--bg-card);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .review-card img { width: 100%; height: 180px; object-fit: cover; }
+    .review-card div { padding: 18px 20px; }
+
+    /* Final */
+    .final-cta {
+      background: linear-gradient(160deg, #1C1917 0%, #2A2520 100%);
+      color: #fff;
+      text-align: center;
+      padding: 100px 24px;
+    }
+    .final-cta h2 { font-family: 'Unbounded', sans-serif; font-size: 2.4rem; margin-bottom: 16px; }
+    .final-cta p { max-width: 520px; margin: 0 auto 28px; opacity: 0.9; }
+
+    footer {
+      background: #141210;
+      color: #A8A29E;
+      text-align: center;
+      padding: 32px 24px 100px;
+      font-size: 0.88rem;
+    }
+
+    /* Sticky CTA mobile */
+    .sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: #fff;
+      padding: 12px 16px;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.08);
+      z-index: 999;
+    }
+    .sticky-cta .btn { width: 100%; }
+
+    @media (max-width: 900px) {
+      .header-nav { display: none; }
+      .header-logo { height: 48px; }
+      .cards, .portfolio-grid, .reviews-grid, .prod-layout, .features, .features-grid { grid-template-columns: 1fr; }
+      .timeline { flex-direction: column; gap: 28px; }
+      .timeline::before { display: none; }
+      .step { text-align: left; padding-left: 56px; }
+      .step-number { position: absolute; left: 0; top: 0; }
+      .sticky-cta { display: block; }
+      .installment-badge { top: 84px; right: 16px; font-size: 0.72rem; }
+      .hero { padding-bottom: 100px; }
+      .section { padding: 64px 0; }
+      .prod-layout { gap: 32px; }
+      .founder-photo { max-width: 220px; }
+      .video-placeholder { max-height: 420px; margin: 0 auto; width: 100%; max-width: 280px; }
+    }
+    @media (max-width: 600px) {
+      .options { grid-template-columns: 1fr; }
+      .header .btn { padding: 8px 14px; font-size: 0.85rem; }
+      .section-title { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <img src="imagine_images/logo.png" alt="Кухонные разговоры" class="header-logo">
+      <nav class="header-nav">
+        <a href="#portfolio">Работы</a>
+        <a href="#process">Этапы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <a href="#quiz" class="btn">Начать разговор</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="installment-badge">Рассрочка 0-0-6</div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Мебель со смыслом</div>
+        <h1>Кухня начинается с разговора.</h1>
+        <p class="lead">Дизайнер приедет к вам домой с образцами. Обсудим, как вы готовите, что храните и о чём мечтаете. Создадим 3D-проект за 3 часа. Изготовим за 30 дней. Установим без пыли. Гарантия 5 лет.</p>
+        <a href="#quiz" class="btn">Начать разговор о моей кухне</a>
+        <p class="hero-micro">Это займёт 15 секунд. Без навязчивых звонков — просто расскажете, что хотите</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz -->
+  <section class="section" id="quiz" style="background: var(--bg-soft);">
+    <div class="container">
+      <h2 class="section-title">Давайте познакомимся</h2>
+      <p class="section-subtitle">Расскажите о своей будущей кухне — мы подберём решение и зафиксируем скидку.</p>
+      <div class="quiz-box">
+        <div class="progress-dots" id="dots"></div>
+        <div class="quiz-step active" data-step="1">
+          <h3>Какая у вас кухня?</h3>
+          <div class="options">
+            <div class="option" data-value="П-образная">
+              <svg width="80" height="50" viewBox="0 0 80 50" style="margin-bottom:8px;"><rect x="2" y="2" width="76" height="46" fill="none" stroke="#1C1917" stroke-width="2"/><rect x="8" y="8" width="20" height="34" fill="#C9A46C" opacity="0.3"/><rect x="52" y="8" width="20" height="34" fill="#C9A46C" opacity="0.3"/><rect x="28" y="8" width="24" height="10" fill="#C9A46C" opacity="0.3"/></svg>
+              П-образная
+            </div>
+            <div class="option" data-value="Угловая">
+              <svg width="80" height="50" viewBox="0 0 80 50" style="margin-bottom:8px;"><rect x="2" y="2" width="46" height="46" fill="none" stroke="#1C1917" stroke-width="2"/><rect x="8" y="8" width="34" height="10" fill="#C9A46C" opacity="0.3"/><rect x="8" y="18" width="10" height="24" fill="#C9A46C" opacity="0.3"/></svg>
+              Угловая
+            </div>
+            <div class="option" data-value="Прямая">
+              <svg width="80" height="50" viewBox="0 0 80 50" style="margin-bottom:8px;"><rect x="2" y="18" width="76" height="14" fill="none" stroke="#1C1917" stroke-width="2"/><rect x="8" y="22" width="64" height="6" fill="#C9A46C" opacity="0.3"/></svg>
+              Прямая
+            </div>
+            <div class="option" data-value="С островом">
+              <svg width="80" height="50" viewBox="0 0 80 50" style="margin-bottom:8px;"><rect x="2" y="2" width="76" height="46" fill="none" stroke="#1C1917" stroke-width="2"/><rect x="8" y="8" width="28" height="10" fill="#C9A46C" opacity="0.3"/><rect x="8" y="18" width="10" height="24" fill="#C9A46C" opacity="0.3"/><rect x="40" y="16" width="28" height="18" fill="#C9A46C" opacity="0.5" stroke="#1C1917" stroke-width="1"/></svg>
+              С островом
+            </div>
+          </div>
+        </div>
+        <div class="quiz-step" data-step="2">
+          <h3>Примерная длина стен?</h3>
+          <div class="slider-wrap">
+            <input type="range" min="2" max="6" value="3.5" step="0.5" id="lengthSlider">
+            <div class="slider-value" id="lengthValue">3.5 м</div>
+          </div>
+          <button class="btn" style="width:100%;" onclick="nextStep()">Далее</button>
+        </div>
+        <div class="quiz-step" data-step="3">
+          <h3>Когда планируете установку?</h3>
+          <div class="options">
+            <div class="option" data-value="Срочно">Срочно</div>
+            <div class="option" data-value="1–3 месяца">1–3 месяца</div>
+            <div class="option" data-value="Просто интересуюсь">Просто интересуюсь</div>
+          </div>
+        </div>
+        <div class="quiz-step" data-step="4">
+          <div class="lead-magnet">Зафиксируем скидку 10 000 ₽ и отправим гайд «Что точно необходимо на новой кухне — и за что не стоит переплачивать».</div>
+          <h3>Отлично! Оставьте телефон — продолжим разговор</h3>
+          <form class="form-fields" onsubmit="submitQuiz(event)">
+            <input type="text" placeholder="Ваше имя" required id="name">
+            <input type="tel" placeholder="+7 (___) ___-__-__" required id="phone">
+            <div style="margin: 8px 0 4px; font-weight: 600; font-size: 0.95rem;">Куда удобнее написать?</div>
+            <div class="options" style="grid-template-columns: 1fr 1fr; margin-bottom: 8px;">
+              <div class="option" data-value="WhatsApp" onclick="selectMessenger(this)">WhatsApp</div>
+              <div class="option" data-value="Telegram" onclick="selectMessenger(this)">Telegram</div>
+            </div>
+            <label style="display:flex; gap:8px; font-size:0.85rem; align-items:flex-start;">
+              <input type="checkbox" required style="margin-top:3px;"> Согласен на обработку персональных данных
+            </label>
+            <button type="submit" class="btn">Начать разговор</button>
+          </form>
+        </div>
+        <div class="quiz-step" data-step="5">
+          <div style="text-align: center; padding: 20px 0;">
+            <div style="font-size: 3rem; margin-bottom: 16px;">✓</div>
+            <h3 style="margin-bottom: 16px;">Скидка зафиксирована!</h3>
+            <p style="margin-bottom: 12px; color: var(--text-muted);">Скидка <strong>10 000 ₽</strong> закреплена за вашим номером.</p>
+            <p style="margin-bottom: 20px; color: var(--text-muted);">Гайд «Что точно необходимо на новой кухне — и за что не стоит переплачивать» уже отправлен в <span id="sentTo">WhatsApp</span>.</p>
+            <p style="font-size: 0.95rem; color: var(--text-muted);">Дизайнер свяжется с вами в удобное время.<br>Никаких навязчивых звонков — просто продолжим разговор.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Three conversations -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Три разговора, которые мы ведём перед тем, как взяться за инструмент</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>О вашей жизни</h3>
+          <p>Как вы готовите, что храните, кто в семье главный на кухне. Кухня, где всё на своём месте — потому что мы спросили, а не угадывали.</p>
+        </div>
+        <div class="card">
+          <h3>О материалах</h3>
+          <p>Что практично, что красиво, что переживёт детей и ремонт. Дизайнер привозит образцы домой. Выбор без давления. Вы трогаете материал руками.</p>
+        </div>
+        <div class="card">
+          <h3>О сроках и цене</h3>
+          <p>Фиксируем цену в договоре. 30 дней на производство. Монтаж до 3 дней. Никаких «сюрпризов» в смете.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="section" id="portfolio" style="background: var(--bg-soft);">
+    <div class="container">
+      <h2 class="section-title">Каждая кухня — это разговор, который уже состоялся</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-card">
+          <img src="imagine_images/yzqcV.jpg" alt="Кухня для семьи">
+          <div class="portfolio-info">
+            <h3>Кухня для семьи, которая готовит вместе</h3>
+            <p><strong>О чём говорили:</strong> Семья из 4 человек, готовят много и вместе.</p>
+            <p><strong>Что сделали:</strong> Угловая кухня с островом, МДФ в эмали, Blum.</p>
+            <p><strong>Срок:</strong> 18 дней.</p>
+            <div class="price">185 000 ₽ под ключ</div>
+            <div class="quote">«Наконец-то не толкаемся у плиты»</div>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <img src="imagine_images/1F5XF.jpg" alt="Светлая кухня">
+          <div class="portfolio-info">
+            <h3>Светлая кухня для молодых родителей</h3>
+            <p><strong>О чём говорили:</strong> Маленький ребёнок, нужна безопасность и лёгкая уборка.</p>
+            <p><strong>Что сделали:</strong> Прямая кухня с островом, светлый дуб.</p>
+            <p><strong>Срок:</strong> 22 дня.</p>
+            <div class="price">142 000 ₽ под ключ</div>
+            <div class="quote">«Всё продумано до мелочей»</div>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <img src="imagine_images/LfhqE.jpg" alt="Тёмная кухня">
+          <div class="portfolio-info">
+            <h3>Уютная U-образная для двоих</h3>
+            <p><strong>О чём говорили:</strong> Любят готовить вечерами, нужна атмосфера.</p>
+            <p><strong>Что сделали:</strong> Тёмный орех + белые матовые фасады.</p>
+            <p><strong>Срок:</strong> 25 дней.</p>
+            <div class="price">210 000 ₽ под ключ</div>
+            <div class="quote">«Теперь кухня — любимое место в доме»</div>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <img src="imagine_images/heDud.jpg" alt="Зелёная кухня">
+          <div class="portfolio-info">
+            <h3>Скандинавская с характером</h3>
+            <p><strong>О чём говорили:</strong> Хотят цвета, но спокойного.</p>
+            <p><strong>Что сделали:</strong> Шалфейные фасады, остров, латунные акценты.</p>
+            <p><strong>Срок:</strong> 20 дней.</p>
+            <div class="price">198 000 ₽ под ключ</div>
+            <div class="quote">«Спасибо, что не продавали лишнее»</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Production -->
+  <section class="section production">
+    <div class="container">
+      <h2 class="section-title">Мы не перекупщики.<br>Мы те, с кем вы говорили — и кто делает</h2>
+      <div class="prod-layout">
+        <div class="founder-block">
+          <img src="imagine_images/C8her.jpg" alt="Основатель Алексей" class="founder-photo">
+          <div class="founder-quote-box">
+            <p>«Меня зовут Алексей. Я веду разговоры с клиентами лично. И отвечаю личной репутацией за каждый миллиметр вашей мебели. Если что-то пойдёт не так — приеду и решу сам. Это не бизнес-схема. Это разговор по-человечески.»</p>
+          </div>
+        </div>
+        <div class="video-block">
+          <div class="video-placeholder">
+            <img src="imagine_images/WII41.jpg" alt="Видео из цеха">
+            <div class="play-overlay">▶</div>
+            <p class="video-caption">Видео 15–20 сек из цеха<br>Станок · Покраска · Руки мастера</p>
+          </div>
+          <div class="features-grid">
+            <div class="feature">✓ Собственная покрасочная камера</div>
+            <div class="feature">✓ Распил без сколов (ЧПУ)</div>
+            <div class="feature">✓ Плиты класса E1 — экологично</div>
+            <div class="feature">✓ Гарантия 5 лет — в договоре</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="section" id="process">
+    <div class="container">
+      <h2 class="section-title">От первого «здравствуйте» до готовой кухни — 5 шагов</h2>
+      <div class="timeline">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Заявка</h3>
+          <p>Вы рассказываете, что хотите. Мы считаем онлайн за 15 минут.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Замер</h3>
+          <p class="highlight">Дизайнер приезжает к вам домой с образцами. Вам не нужно никуда ехать.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Договор</h3>
+          <p>Утверждаем 3D, фиксируем цену. Никаких «плюс-минус».</p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Производство</h3>
+          <p>30 дней на фабрике. Присылаем фото с производства.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">5</div>
+          <h3>Монтаж</h3>
+          <p>До 3 дней. Чисто, без пыли.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" style="background: var(--bg-soft);">
+    <div class="container">
+      <h2 class="section-title">Разговоры, которые закончились готовой кухней</h2>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <img src="imagine_images/yVl9j.jpg" alt="Переписка">
+          <div><p>«Думала, будет дольше. Всё сделали в срок и чисто.»</p></div>
+        </div>
+        <div class="review-card">
+          <img src="imagine_images/oeSDt.jpg" alt="Готовая кухня">
+          <div><p>«Наконец-то кухня, где всё продумано. Спасибо за честный разговор.»</p></div>
+        </div>
+        <div class="review-card">
+          <img src="imagine_images/heDud.jpg" alt="Кухня">
+          <div><p>«Спасибо, что не продавали лишнее. Получилось именно то, что нужно.»</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installment -->
+  <section class="section">
+    <div class="container" style="text-align:center; max-width:680px;">
+      <h2 class="section-title">Не хотите платить всё сразу? Давайте обсудим.</h2>
+      <p style="margin-bottom:28px; color:var(--text-muted);">Мебель со смыслом — это ещё и финансовая прозрачность. Оформите рассрочку от Т-Банка прямо на сайте. Без переплат и скрытых комиссий.</p>
+      <a href="#" class="btn" onclick="alert('Виджет Т-Банка (0-0-6)'); return false;">Узнать условия рассрочки</a>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section class="section" id="contacts" style="background: var(--bg-soft);">
+    <div class="container">
+      <h2 class="section-title">Контакты</h2>
+      <p class="section-subtitle">Новосибирск. Собственное производство. Приезжайте или пишите — как удобнее.</p>
+      <div class="cards" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); max-width: 900px; margin: 0 auto;">
+        <div class="card" style="text-align: center;">
+          <h3>Телефон</h3>
+          <p style="font-size: 1.3rem; font-weight: 700; margin: 12px 0;"><a href="tel:+73831234567" style="color: inherit; text-decoration: none;">+7 (383) 123-45-67</a></p>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Пн–Сб с 9:00 до 19:00</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3>WhatsApp / Telegram</h3>
+          <p style="margin: 12px 0;">
+            <a href="https://wa.me/73831234567" class="btn" style="margin: 4px; padding: 10px 16px; font-size: 0.9rem;" target="_blank">WhatsApp</a>
+            <a href="https://t.me/kuhonnye_razgovory" class="btn btn-outline" style="margin: 4px; padding: 10px 16px; font-size: 0.9rem;" target="_blank">Telegram</a>
+          </p>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Отвечаем быстро</p>
+        </div>
+        <div class="card" style="text-align: center;">
+          <h3>Адрес</h3>
+          <p style="font-weight: 600; margin: 12px 0;">г. Новосибирск,<br>ул. Примерная, 12</p>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Производство и шоурум<br>по предварительной записи</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Ваша кухня начинается с одного разговора</h2>
+      <p>Оставьте телефон — дизайнер перезвонит в удобное время, ответит на вопросы и предложит приехать с образцами. Без давления. Без навязывания. Просто разговор.</p>
+      <a href="#quiz" class="btn">Начать разговор</a>
+      <p style="margin-top:16px; font-size:0.95rem; opacity:0.8;">Или напишите нам в WhatsApp — как удобнее.</p>
+    </div>
+  </section>
+
+  <footer>
+    «Кухонные разговоры» — мебель со смыслом. Новосибирск. Собственное производство. Гарантия 5 лет.
+  </footer>
+
+  <div class="sticky-cta">
+    <a href="#quiz" class="btn">Начать разговор</a>
+  </div>
+
+  <script>
+    const steps = document.querySelectorAll('.quiz-step');
+    let current = 0;
+    const answers = {};
+
+    function updateDots() {
+      const dots = document.getElementById('dots');
+      dots.innerHTML = '';
+      for (let i = 0; i < steps.length; i++) {
+        const d = document.createElement('div');
+        d.className = 'dot' + (i === current ? ' active' : '');
+        dots.appendChild(d);
+      }
+    }
+    updateDots();
+
+    document.querySelectorAll('.quiz-step[data-step="1"] .option, .quiz-step[data-step="3"] .option').forEach(opt => {
+      opt.addEventListener('click', function() {
+        this.parentElement.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+        this.classList.add('selected');
+        const step = this.closest('.quiz-step').dataset.step;
+        if (step === '1') answers.kitchen = this.dataset.value;
+        if (step === '3') answers.timeline = this.dataset.value;
+        setTimeout(nextStep, 280);
+      });
+    });
+
+    const slider = document.getElementById('lengthSlider');
+    const lengthValue = document.getElementById('lengthValue');
+    if (slider) {
+      slider.addEventListener('input', () => {
+        lengthValue.textContent = slider.value + ' м';
+        answers.length = slider.value;
+      });
+    }
+
+    function nextStep() {
+      if (current < steps.length - 1) {
+        steps[current].classList.remove('active');
+        current++;
+        steps[current].classList.add('active');
+        updateDots();
+      }
+    }
+
+    function selectMessenger(el) {
+      el.parentElement.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+      el.classList.add('selected');
+      answers.messenger = el.dataset.value;
+    }
+
+    function submitQuiz(e) {
+      e.preventDefault();
+      answers.name = document.getElementById('name').value;
+      answers.phone = document.getElementById('phone').value;
+      if (!answers.messenger) answers.messenger = 'WhatsApp';
+      document.getElementById('sentTo').textContent = answers.messenger;
+
+      // Подготовка данных для Bitrix24 CRM
+      const crmPayload = {
+        name: answers.name,
+        phone: answers.phone,
+        messenger: answers.messenger,
+        kitchen_type: answers.kitchen || '',
+        wall_length: answers.length || '',
+        timeline: answers.timeline || '',
+        source: 'quiz_landing',
+        utm_source: new URLSearchParams(window.location.search).get('utm_source') || '',
+        utm_medium: new URLSearchParams(window.location.search).get('utm_medium') || '',
+        utm_campaign: new URLSearchParams(window.location.search).get('utm_campaign') || ''
+      };
+
+      // Отправка в Bitrix24
+      fetch('https://b24-yj7kbr.bitrix24.ru/rest/1/8s303w9445vv6983/crm.lead.add.json', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          fields: {
+            TITLE: 'Квиз с сайта: ' + answers.name,
+            NAME: answers.name,
+            PHONE: [{ VALUE: answers.phone, VALUE_TYPE: 'WORK' }],
+            COMMENTS:
+              'Мессенджер: ' + answers.messenger + '\n' +
+              'Тип кухни: ' + (answers.kitchen || '—') + '\n' +
+              'Длина стен: ' + (answers.length || '—') + ' м\n' +
+              'Срок: ' + (answers.timeline || '—') + '\n' +
+              'UTM source: ' + crmPayload.utm_source + '\n' +
+              'UTM medium: ' + crmPayload.utm_medium + '\n' +
+              'UTM campaign: ' + crmPayload.utm_campaign,
+            SOURCE_ID: 'WEB',
+            UTM_SOURCE: crmPayload.utm_source,
+            UTM_MEDIUM: crmPayload.utm_medium,
+            UTM_CAMPAIGN: crmPayload.utm_campaign
+          }
+        })
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log('Лид создан в Bitrix24:', data);
+      })
+      .catch(error => {
+        console.error('Ошибка отправки в Bitrix24:', error);
+      });
+
+      console.log('CRM payload for Bitrix24:', crmPayload);
+
+      steps[current].classList.remove('active');
+      current = 4;
+      steps[current].classList.add('active');
+      updateDots();
+    }
+
+    document.getElementById('phone')?.addEventListener('input', function(e) {
+      let v = e.target.value.replace(/\D/g, '');
+      if (v.startsWith('8')) v = '7' + v.slice(1);
+      if (!v.startsWith('7')) v = '7' + v;
+      v = v.slice(0, 11);
+      let formatted = '+7';
+      if (v.length > 1) formatted += ' (' + v.slice(1, 4);
+      if (v.length > 4) formatted += ') ' + v.slice(4, 7);
+      if (v.length > 7) formatted += '-' + v.slice(7, 9);
+      if (v.length > 9) formatted += '-' + v.slice(9, 11);
+      e.target.value = formatted;
+    });
+  </script>
+</body>
+</html>
